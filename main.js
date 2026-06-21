@@ -3,6 +3,8 @@ import express from "express";
 const app = express();
 const port = 3000;
 
+import movieroutes from "./routes/movies.route.js"
+
 app.get('/', (req, res) => {
   res.send
   (`
@@ -177,26 +179,8 @@ app.get('/', (req, res) => {
   `)
 })
 //CRUD functionality
+app.use("/movies", movieroutes)
 
-// R - For Reading
-app.get('/movies', (req,res) => {
-  
-})
-
-// C - for creating movies
-app.post('/movies', (req,res) => {
-  
-})
-
-// U - for updating movie
-app.put('/movies/:id', (req,res) => {
-  
-})
-
-// D - For Deleting Movie
-app.delete('/movies/:id', (req,res) => {
-  
-})
 
 app.listen(port, () => {
   console.log(`SERVER LISTENINGV AT http://localhost:${port}`)
