@@ -8,3 +8,8 @@
 4.`git add .`
 5.`git commit -m "Your MSG"`
 6.`git push -u origin main' or 'git push`
+
+### database option
+
+1. `SQL - (MYSQL mariadb, posgresql)`
+2. `NOSQL - (MongoDB)`
