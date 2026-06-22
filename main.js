@@ -181,6 +181,9 @@ app.get('/', (req, res) => {
     </html>
   `)
 })
+//DATA UNDERSTANING MIDDLEWARE
+app.use(express.json())
+app.use(express.urlencoded({ extended: true}))
 //CRUD functionality
 app.use("/movies", movieroutes)
 
