@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Movies Frontend</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Movies</h1>
+      <div class="search">
+        <input id="searchInput" placeholder="Search by name" />
+        <button id="searchBtn">Search</button>
+        <button id="refreshBtn">Refresh</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="form-card">
+        <h2 id="formTitle">Add new movie</h2>
+        <form id="movieForm">
+          <label>
+            Name
+            <input id="name" required />
+          </label>
+          <label>
+            Description
+            <textarea id="discription" rows="3" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" id="submitBtn">Save</button>
+            <button type="button" id="cancelEdit" class="muted">Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="list-card">
+        <h2>Movie List</h2>
+        <div id="moviesList" class="movies-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Open-source demo — connect to backend at
+      <code>http://localhost:3000/movies</code>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
